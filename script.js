@@ -1,3 +1,6 @@
+// Access body element
+const body =  document.body;
+
 // Access HTML container div
 const container = document.querySelector(".container");
 
@@ -36,3 +39,26 @@ for(let i=0; i<squareNumber; i++){
     //Inserting row into container
     container.appendChild(row);
 }
+
+// Get all the squares
+const squares = document.querySelectorAll(".square");
+
+// Loop through each square and add a click event listener
+squares.forEach(function(square) {
+    square.addEventListener("click", function() {
+        square.style.backgroundColor = "rgb(0 255 255)";
+    });
+});
+
+// Create a reset button and append it to the container div
+const resetButton = document.createElement("button");
+resetButton.setAttribute('id', 'reset-button');
+resetButton.textContent = "Reset";
+body.appendChild(resetButton);
+
+// Add a click event listener to the reset button that sets all squares back to the default color
+resetButton.addEventListener("click", function() {
+    squares.forEach(function(square) {
+        square.style.backgroundColor = "";
+    });
+});
