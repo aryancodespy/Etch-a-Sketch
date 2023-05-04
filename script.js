@@ -46,7 +46,7 @@ const squares = document.querySelectorAll(".square");
 // Loop through each square and add a click event listener
 squares.forEach(function(square) {
     square.addEventListener("click", function() {
-        square.style.backgroundColor = "rgb(0 255 255)";
+        square.style.backgroundColor = "rgb(158 158 255)";
     });
 });
 
