@@ -65,7 +65,7 @@ generateGrid(8);
 // Create a reset button and append it to the container div
 const resetButton = document.createElement("button");
 resetButton.setAttribute("id", "reset-button");
-resetButton.textContent = "Reset";
+resetButton.textContent = "Reset Color";
 body.appendChild(resetButton);
 
 // Add a click event listener to the reset button that sets all squares back to the default color
