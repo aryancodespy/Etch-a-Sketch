@@ -93,3 +93,19 @@ newGridButton.addEventListener("click", function () {
     alert("Invalid input. Please enter a number between 1 and 100.");
   }
 });
+
+// Create a default grid button and append it to the container div
+const defaultGridButton = document.createElement("button");
+defaultGridButton.setAttribute("id", "default-grid-button");
+defaultGridButton.textContent = "Default Grid";
+body.appendChild(defaultGridButton);
+
+// Add a click event listener to the default grid button that resets the grid to its default
+defaultGridButton.addEventListener("click", function () {
+  generateGrid(8);
+});
+
+// Function to generate default grid
+function generateDefaultGrid() {
+  generateGrid(8);
+}
